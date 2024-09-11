@@ -1,0 +1,17 @@
+<div class="container">
+  <p>Title: Khuê 1234</p>
+  <p>Title: {{ taskTitle }}</p>
+  <todo-list-item></todo-list-item>
+  @if (isAdmin) {
+    <button [attr.data-test-id]="testId">Admin</button>
+  } @else {
+    <button [attr.data-test-id]="testId">User</button>
+  }
+  <ul>
+    @for (ingredient of ingredientList; track ingredient.name) {
+      <li>{{ ingredient.quantity }} - {{ ingredient.name }}</li>
+    }
+  </ul>
+  <button (click)="save()">Save</button>
+
+</div>
