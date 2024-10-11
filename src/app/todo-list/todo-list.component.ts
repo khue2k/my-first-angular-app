@@ -25,9 +25,4 @@ export class TodoList {
 
   }
 
-  validateInput() {
-
-  }
-
-
 }
