@@ -18,7 +18,7 @@ export class TodoList {
   isAdmin = true;
   ingredientList = [
     {name: 'noodles', quantity: 1},
-    {name: 'miso broth', quantity: 1},
+    {name: 'miso broth', quantity: 2},
     {name: 'egg', quantity: 2},
   ];
   save() {
