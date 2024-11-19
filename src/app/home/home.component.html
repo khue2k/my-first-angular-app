@@ -1,2 +1,5 @@
 <p>home works!</p>
 <button (click)="homeBtn()">Home button</button>
+<input (input)="onUsernameChange()" [(ngModel)] ="username" placeholder="Enter your name">
+<p>Hello, {{username}}!</p>
+

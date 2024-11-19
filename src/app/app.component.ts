@@ -12,6 +12,5 @@ import {HomeComponent} from "./home/home.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'huhuhuhu';
-  dataFromParent = 'khue';
+  title = 'abc';
 }
