@@ -1,15 +1,19 @@
 import {Component} from '@angular/core';
-import {RouterOutlet} from '@angular/router';
-import {HomeComponent} from "./home/home.component";
-import {ParentComponent} from "./components/parent/parent.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeComponent, ParentComponent],
+  imports: [],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'abc';
+  message = 'Hello World!';
+
+  onHomeClick() {
+    const temp = this.title;
+    this.title = this.message;
+    this.message = temp;
+  }
 }
