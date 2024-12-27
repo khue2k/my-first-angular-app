@@ -1,5 +1,7 @@
 <p>home works!</p>
 <button (click)="homeBtn()">Home button</button>
-<input (input)="onUsernameChange()" [(ngModel)] ="username" placeholder="Enter your name">
-<p>Hello, {{username}}!</p>
+<input (input)="onUsernameChange()" [(ngModel)]="username" placeholder="Enter your name">
+<p>Hello, {{ username }}!</p>
+<p (mouseover)="changeMessage()"> There's a secret message for you, hover to reveal 👀
+  {{ message }}</p>
 
