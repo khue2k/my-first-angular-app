@@ -1,11 +1,14 @@
 <div class="container">
- <header class="row">
-   <div class="col">
-     <h1>Hello angular</h1>
-   </div>
- </header>
-  <p class="alert alert-success mt-3">{{ message }}</p>
-  <button type="button" class="btn btn-outline-primary " (click)="onHomeClick()">Home</button>
+  <header class="row">
+    <div class="col">
+      <div class="container">
+        <h1>Product</h1>
+      </div>
+    </div>
+  </header>
+  <section class="row">
+    <div class="col">
+      <app-product-list></app-product-list>
+    </div>
+  </section>
 </div>
-
-

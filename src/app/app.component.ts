@@ -1,19 +1,14 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
+import { Product } from './common/Product';
+import { ProductListComponent } from "./components/product-list/product-list.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [],
+  imports: [ProductListComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'] // Sửa lỗi "styleUrl" thành "styleUrls"
 })
 export class AppComponent {
-  title = 'abc';
-  message = 'Hello World!';
 
-  onHomeClick() {
-    const temp = this.title;
-    this.title = this.message;
-    this.message = temp;
-  }
 }

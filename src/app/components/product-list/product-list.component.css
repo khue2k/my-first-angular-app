@@ -1,0 +1,39 @@
+ .search {
+   display: flex;
+   /* Đặt các phần tử con theo chiều ngang */
+   align-items: center;
+   /* Căn chỉnh chiều cao giữa các phần tử */
+   margin-bottom: 10px;
+ }
+
+ .search input {
+   height: 40px;
+   /* Chiều cao của input */
+   border-radius: 5px;
+   /* Tùy chỉnh bo góc nếu cần */
+   padding: 0 10px;
+   /* Tạo không gian bên trong */
+   border: 1px solid #ccc;
+   /* Đường viền của input */
+ }
+
+ .search button {
+   height: 40px;
+   /* Chiều cao khớp với input */
+   margin-left: 10px;
+   /* Tạo khoảng cách giữa input và button */
+   border-radius: 5px;
+   /* Bo góc giống input */
+ }
+
+ td button {
+   margin-right: 10px;
+ }
+
+ th {
+   text-align: center;
+ }
+
+ td {
+   text-align: center;
+ }
