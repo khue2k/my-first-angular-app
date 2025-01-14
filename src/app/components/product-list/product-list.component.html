@@ -1,4 +1,4 @@
-<div class="container">
+<div class="">
     <div class="search">
         <input type="text" class="form-control" [(ngModel)]="searchText" placeholder="Enter search term"
             (keydown.enter)="search()" pattern="[0-9]*" title="Only numbers are allowed"
@@ -22,6 +22,7 @@
                     <tr>
                         <th>Product Code</th>
                         <th>Product Name</th>
+                        <th>Star rating</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -29,6 +30,7 @@
                     <tr *ngFor="let p of productSearchresult">
                         <td>{{ p.productCode }}</td>
                         <td>{{ p.productName }}</td>
+                        <td><app-star></app-star></td>
                         <td>
                             <button class="btn btn-primary" (click)="viewProduct(p)">View</button>
                             <button class="btn btn-primary" (click)="editProduct(p)">Edit</button>
@@ -39,7 +41,5 @@
             </table>
         </div>
     </div>
-
-
-    <app-product-view *ngIf="selectedProduct" [product]="selectedProduct"></app-product-view>
+    <!-- <app-product-view *ngIf="selectedProduct" [product]="selectedProduct"></app-product-view> -->
 </div>

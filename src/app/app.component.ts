@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Product } from './common/Product';
 import { ProductListComponent } from "./components/product-list/product-list.component";
+import { ProductDetailComponent } from "./components/product-detail/product-detail.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ProductListComponent],
+  imports: [ProductListComponent, ProductDetailComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'] // Sửa lỗi "styleUrl" thành "styleUrls"
 })

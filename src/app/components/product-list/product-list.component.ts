@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../../common/Product';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ProductViewComponent } from "../product-view/product-view.component";
+import { StarComponent } from "../star/star.component";
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [CommonModule, FormsModule, ProductViewComponent],
+  imports: [CommonModule, FormsModule, StarComponent],
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
@@ -18,9 +18,7 @@ export class ProductListComponent implements OnInit {
   products: Product[] = [
     new Product('P01', 'Hat'),
     new Product('P02', 'Shirt'),
-    new Product('P03', 'Shoes'),
-    new Product('P04', 'Jacket'),
-    new Product('P05', 'Scarf')
+    new Product('P03', 'Shoes')
   ];
   productSearchresult = this.products; // Filtered product list
 
