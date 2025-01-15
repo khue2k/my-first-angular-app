@@ -8,8 +8,15 @@
   </header>
   <section class="row">
     <div class="col">
-      <app-product-detail></app-product-detail>
-      <app-product-list></app-product-list>
+    <ul>
+      <li>
+        <a routerLink ="/product-detail">Product detail</a>
+      </li>
+      <li>
+        <a routerLink="/product-list">Product list</a>
+      </li>
+    </ul>
     </div>
   </section>
+  <router-outlet></router-outlet>
 </div>

@@ -72,4 +72,8 @@ export class ProductListComponent implements OnInit {
       event.preventDefault(); // Prevent input if it's not alphanumeric
     }
   }
+
+  changeStarRating(message: String) {
+    console.log(`Message :${message}`)
+  }
 }

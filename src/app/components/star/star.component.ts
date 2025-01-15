@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
 
 @Component({
   selector: 'app-star',
@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   templateUrl: './star.component.html',
   styleUrl: './star.component.css'
 })
-export class StarComponent implements OnInit {
+export class StarComponent implements OnInit ,OnChanges{
   @Input()
   rating: number = 0;
 
@@ -15,8 +15,14 @@ export class StarComponent implements OnInit {
   ratingClick: EventEmitter<String> = new EventEmitter();
   rate() {
     console.log('star rating')
+    this.ratingClick.emit(`Rating: ${this.rating}`);
   }
   ngOnInit(): void {
+    console.log('ngOnInit');
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log("ngOnChanges", changes);
   }
 
 }
