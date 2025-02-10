@@ -8,3 +8,4 @@ export const routes: Routes = [
   { path: 'product-list', component: ProductListComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
+
