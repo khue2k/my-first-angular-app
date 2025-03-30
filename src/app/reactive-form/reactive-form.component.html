@@ -1,0 +1,6 @@
+<p>reactive-form works!</p>
+<label for="name">Name: </label>
+<input id="name" type="text" [formControl]="name">
+<br>
+<button type="button" (click)="updateName('')">Update name</button>
+<p>Value: {{ name.value }}</p>
