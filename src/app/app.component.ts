@@ -1,15 +1,23 @@
 import {Component} from '@angular/core';
-import {RouterLink, RouterOutlet} from "@angular/router";
-import {NgIf} from "@angular/common";
+import {RouterOutlet} from "@angular/router";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterLink, RouterOutlet, NgIf],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'] // Sửa lỗi "styleUrl" thành "styleUrls"
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  isLoggedIn: boolean = true;
+  public isDanger: boolean = false;
+  public isWarning: boolean = false;
+  public classes: any = ['background-yellow', 'red-bolder']
 
+  toggleDanger() {
+    this.isDanger = !this.isDanger;
+  }
+
+  toggleWarning() {
+    this.isWarning = !this.isWarning;
+  }
 }

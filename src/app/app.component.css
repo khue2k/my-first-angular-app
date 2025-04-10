@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  margin: 20px;
+}
+.box{
+  padding: 50px;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: solid black 1px;
+}
+.background-yellow{
+  background-color: yellow;
+}
+
+.red-bolder{
+  border: solid red 1px;
+}

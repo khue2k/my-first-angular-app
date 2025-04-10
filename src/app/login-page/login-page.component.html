@@ -1,1 +1,30 @@
-<p>login-page works!</p>
+<div class="body">
+  <div class="login-container">
+    <div class="login-form">
+      <h1>Login</h1>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label>Email: </label>
+          <input type="text" id="email" placeholder="Type your email" required="required"
+                 class="ant-input" formControlName="email">
+        </div>
+
+        <div class="form-group">
+          <label>Password: </label>
+          <input type="text" id="password" placeholder="Type your password" required="required"
+                 class="ant-input" formControlName="password">
+        </div>
+
+        <div class="forgot-password">
+          <a [href]="forgotPasswordUrl">Forgot password ?</a>
+        </div>
+        <button type="submit" class="login-btn">Login</button>
+        <div class="separator">Or Sign Up Using</div>
+
+        <div class="signup-link">
+          <a href="#">SIGN UP</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
