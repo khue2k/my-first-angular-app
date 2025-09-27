@@ -1,7 +1,7 @@
-import {Component, Input, OnInit, Output} from '@angular/core';
+import {Component, Input, Output} from '@angular/core';
 import {Author} from "./author-detail.service";
 import {NgIf} from "@angular/common";
-import EventEmitter from "node:events";
+import {EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-author-detail',
@@ -12,17 +12,18 @@ import EventEmitter from "node:events";
   templateUrl: './author-detail.component.html',
   styleUrl: './author-detail.component.css'
 })
-export class AuthorDetailComponent implements OnInit {
+export class AuthorDetailComponent {
   @Input() author: Author | undefined;
-  // @ts-ignore
-  @Output() deleteAuthor = new EventEmitter<Author>();
 
-  ngOnInit(): void {
+  @Output() authorSelect = new EventEmitter<Author>();
+  @Output() authorDelete = new EventEmitter<Author>();
 
+
+  select(author: Author | undefined) {
+    this.authorSelect.emit(author);
   }
 
-  handleDelete() {
-    // @ts-ignore
-    this.deleteAuthor.emit(this.author);
+  delete(author: Author | undefined) {
+    this.authorDelete.emit(author);
   }
 }

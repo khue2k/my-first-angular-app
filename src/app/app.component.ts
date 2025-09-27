@@ -1,24 +1,20 @@
-import {Component} from '@angular/core';
+import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {RouterOutlet} from "@angular/router";
-import {ProgressBarComponent} from "./progress-bar/progress-bar.component";
+import {FormsModule} from "@angular/forms";
+import {ToggleComponent} from "./toggle/toggle.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ProgressBarComponent],
+  imports: [RouterOutlet, FormsModule, ToggleComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  public isDanger: boolean = false;
-  public isWarning: boolean = false;
-  public classes: any = ['background-yellow', 'red-bolder']
+export class AppComponent implements AfterViewInit{
+  @ViewChild("toggleComponent") toggle: ToggleComponent | undefined;
+  checked: boolean= false;
 
-  toggleDanger() {
-    this.isDanger = !this.isDanger;
-  }
-
-  toggleWarning() {
-    this.isWarning = !this.isWarning;
+  ngAfterViewInit(): void {
+    console.log(this.toggle)
   }
 }

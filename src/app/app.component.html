@@ -1,2 +1,3 @@
 <router-outlet></router-outlet>
-<app-progress-bar [progress]="90"></app-progress-bar>
+<toggle #toggleComponent [(checked)]="checked"></toggle>
+<button (click)="toggleComponent.toggle()">toggle me</button>
